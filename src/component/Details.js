@@ -23,10 +23,10 @@ class Details extends Component {
         city:e.target.parentElement.cityText.value,
      })
      let site=await axios.get(`https://eu1.locationiq.com/v1/search.php?key=${this.state.token}&q=${this.state.city}&format=json`)
-     this.setState({
+     await this.setState({
         cityInfo:site['data'][0],
      })
-     this.setState({
+     await this.setState({
         src:`https://maps.locationiq.com/v3/staticmap?key=${process.env.React_APP_TOKENKEY}&center=${this.state.cityInfo.lat},${this.state.cityInfo.lon}&zoom=12&size=400x400&markers=icon:large-red-cutout|${this.state.cityInfo.lat},${this.state.cityInfo.lon}|${this.state.cityInfo.lat},${this.state.cityInfo.lon}`,
         show:true 
      })
