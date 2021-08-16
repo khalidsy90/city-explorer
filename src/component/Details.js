@@ -6,7 +6,7 @@ class Details extends Component {
         super(props)
         this.state={
             token:process.env.React_APP_TOKENKEY,
-            city:'',
+            city:'irbid',
             cityInfo:{},
             show:false,
             src:''
