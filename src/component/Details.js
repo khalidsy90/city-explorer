@@ -14,6 +14,7 @@ class Details extends Component {
     }
     getLoction=async(e) =>{
      e.preventDefault();
+     this.props.updateWeather(e.target.parentElement.cityText.value,)
      if (e.target.parentElement.cityText.value === '') {
          e.target.parentElement.cityText.style.backgroundColor='red'
          return;
@@ -54,7 +55,7 @@ class Details extends Component {
                         {this.state.show === true ?
                         <Form.Text className="text-muted" style={{fontSize:'25px'}}>
                         City is {this.state.city}<br/>
-                        The lat is {this.state.cityInfo.lat} <br/>
+                        Lat is {this.state.cityInfo.lat} <br/>
                         Lon is is {this.state.cityInfo.lon} <br/>
                         </Form.Text>:''
                         }
