@@ -16,7 +16,7 @@ export default class App extends React.Component {
         }
     }
     updateWeather = async(city)=>{
-        let data=await axios.get(`http://localhost:3001/weather?city=${city}`)
+        let data=await axios.get(`${process.env.REACT_APP_SERVER_LINK}/weather?city=${city}`)
         if(data.data.length > 0){
           await this.setState({
             weather:data.data,
