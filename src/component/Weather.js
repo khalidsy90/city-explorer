@@ -1,0 +1,28 @@
+import React, { Component } from 'react'
+import { Col } from 'react-bootstrap';
+import Card from 'react-bootstrap/Card'
+
+class Weather extends Component {
+    constructor(props){
+        super(props);
+        this.state={
+           
+        }
+    }
+    render() {
+        return (
+            <Col md={4}>
+            <Card style={{ width: '18rem' }}>
+                    <Card.Body>
+                        <Card.Title>Date is {this.props.getweather.date}</Card.Title>
+                        <Card.Text>
+                        {this.props.getweather.description}
+                        </Card.Text>
+                    </Card.Body>
+                </Card>
+            </Col>         
+        )
+    }
+}
+
+export default Weather
