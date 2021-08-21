@@ -16,7 +16,7 @@ class Weather extends Component {
                     <Card.Body>
                         <Card.Title>Date is {this.props.getweather.date}</Card.Title>
                         <Card.Text>
-                        {this.props.getweather.desc}
+                            {this.props.getweather.desc}
                         </Card.Text>
                     </Card.Body>
                 </Card>

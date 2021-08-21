@@ -1,27 +1,24 @@
 import React, { Component } from 'react'
-import {Card, Col} from 'react-bootstrap'
+import {Row} from 'react-bootstrap'
+import Movie from './Movie';
 
 export class Movies extends Component {
     constructor(props){
         super(props)
-        this.setState={
-
+        this.state={
+            // aflam:this.props.aflam ,
+            // showAflam:this.props.showAflam
         }
     }
-    //title,overview,vote_average,vote_count,poster_path,popularity,release_date
     render() {
+        console.log(this.props.aflam);
         return (
-            <Col md={4} className='mb-5 '>
-                <Card style={{ width: '18rem' }}>
-                    <Card.Img variant="top" src={this.props.getaflam.poster_path}/>
-                    <Card.Body>
-                        <Card.Title>{this.props.getaflam.title}</Card.Title>
-                        <Card.Text>
-                        {this.props.getaflam.overview}
-                        </Card.Text>
-                    </Card.Body>
-                </Card>
-            </Col>
+                <Row className="justify-content-center w-100 p-5" style={{width:'100%',textAlign:"center"}}>
+                     {
+                      this.props.showAflam && this.props.aflam.map((film,idx)=>
+                      <Movie getMovies={film} key={idx}/>)
+                     }
+                </Row>
         )
     }
 }
