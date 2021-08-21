@@ -16,7 +16,6 @@ class Details extends Component {
      e.preventDefault();
      this.props.newWeather(e.target.parentElement.cityText.value)
      this.props.newAflam(e.target.parentElement.cityText.value)
-    //  this.props.updateWeather(e.target.parentElement.cityText.value)
      if (e.target.parentElement.cityText.value === '') {
          e.target.parentElement.cityText.style.backgroundColor='red'
          return;
