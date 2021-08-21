@@ -5,15 +5,17 @@ export class Weathers extends Component {
     constructor(props){
         super(props)
         this.state={
-       weather:this.props.Weather,
-       showWeather:this.props.showWeather
+    //    weather:this.props.Weather,
+    //    showWeather:this.props.showWeather
         }
     }
+   
     render() {
+        console.log(this.props.Weather);
         return (
             <Row className='justify-content-center w-100 p-5 '>
                 {
-                      this.state.showWeather && this.state.weather.map((city,idx) =>
+                      this.props.showWeather && this.props.Weather.map((city,idx) =>
                       <Weather getweather={city} key={idx}/>
                       ) 
                 }
