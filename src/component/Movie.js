@@ -13,7 +13,7 @@ class Movie extends Component {
         return (
             <Col md={4} className='mb-5 '>
                 <Card style={{ width: '18rem' }}>
-                    <Card.Img variant="top" src={this.props.getMovies.poster_path}/>
+                    <Card.Img variant="top" src={'https://image.tmdb.org/t/p/w500'+this.props.getMovies.poster_path}/>
                     <Card.Body>
                         <Card.Title>{this.props.getMovies.title}</Card.Title>
                         <Card.Text>

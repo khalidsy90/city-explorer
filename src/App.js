@@ -6,7 +6,6 @@ import axios from 'axios'
 import Movies from './component/Movies';
 import Weathers from './component/Weathers';
 
-
 export default class App extends React.Component {
     constructor(props){
         super(props)
@@ -47,9 +46,7 @@ export default class App extends React.Component {
         })
       } 
     }
-
     render() {
-      console.log(this.state.weather);
         return (
             <div className="App w-100 text-center mr-0 justify-content-center align-items-center">
                     <NavComp/>
