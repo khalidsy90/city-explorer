@@ -11,7 +11,6 @@ export class Movies extends Component {
         }
     }
     render() {
-        console.log(this.props.aflam);
         return (
                 <Row className="justify-content-center w-100 p-5" style={{width:'100%',textAlign:"center"}}>
                      {

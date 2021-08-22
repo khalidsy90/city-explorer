@@ -5,13 +5,11 @@ export class Weathers extends Component {
     constructor(props){
         super(props)
         this.state={
-    //    weather:this.props.Weather,
-    //    showWeather:this.props.showWeather
+
         }
     }
    
     render() {
-        console.log(this.props.Weather);
         return (
             <Row className='justify-content-center w-100 p-5 '>
                 {
